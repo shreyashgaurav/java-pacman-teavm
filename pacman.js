@@ -1911,7 +1911,7 @@ function cp_PacManGame() {
     a.$nextImagePath = null;
     a.$hasQueuedDirection = 0;
     a.$directionBufferFrames = 0;
-    a.$MAX_BUFFER_FRAMES = 10;
+    a.$MAX_BUFFER_FRAMES = 8;
     a.$tileMap = null;
     a.$walls = null;
     a.$foods = null;
@@ -1946,8 +1946,8 @@ let cp_PacManGame__init_ = $this => {
     $this.$nextImagePath = null;
     $this.$hasQueuedDirection = 0;
     $this.$directionBufferFrames = 0;
-    $this.$MAX_BUFFER_FRAMES = 10;
-    $this.$tileMap = $rt_wrapArray(jl_String, [$rt_s(20), $rt_s(21), $rt_s(22), $rt_s(23), $rt_s(24), $rt_s(25), $rt_s(26), $rt_s(27), $rt_s(28), $rt_s(29), $rt_s(30), $rt_s(31), $rt_s(30), $rt_s(32), $rt_s(22), $rt_s(33), $rt_s(34), $rt_s(35), $rt_s(36), $rt_s(37), $rt_s(38)]);
+    $this.$MAX_BUFFER_FRAMES = 8;
+    $this.$tileMap = $rt_wrapArray(jl_String, [$rt_s(20), $rt_s(21), $rt_s(22), $rt_s(23), $rt_s(24), $rt_s(25), $rt_s(26), $rt_s(27), $rt_s(28), $rt_s(29), $rt_s(30), $rt_s(31), $rt_s(30), $rt_s(32), $rt_s(22), $rt_s(33), $rt_s(34), $rt_s(35), $rt_s(36), $rt_s(37), $rt_s(20)]);
     $this.$directions = $rt_createCharArrayFromData([85, 68, 76, 82]);
     $this.$random0 = ju_Random__init_0();
     $this.$score = 0;
@@ -2042,7 +2042,7 @@ cp_PacManGame_move = $this => {
             $this.$directionBufferFrames = 0;
         } else {
             $this.$directionBufferFrames = $this.$directionBufferFrames + 1 | 0;
-            if ($this.$directionBufferFrames > 10) {
+            if ($this.$directionBufferFrames > 8) {
                 $this.$hasQueuedDirection = 0;
                 $this.$nextDirection = 78;
                 $this.$nextImagePath = null;
@@ -2335,8 +2335,8 @@ jl_Class, 0, jl_Object, [jlr_AnnotatedElement, jlr_Type], 0, 3, 0, 0, ["$getName
 ju_Comparator, 0, jl_Object, [], 3, 3, 0, 0, 0,
 jl_String$_clinit_$lambda$_115_0, 0, jl_Object, [ju_Comparator], 0, 3, 0, 0, ["$_init_", $rt_wrapFunction0(jl_String$_clinit_$lambda$_115_0__init_)]]);
 let $rt_charArrayCls = $rt_arraycls($rt_charcls);
-$rt_stringPool(["0", "images/wall.png", "images/blueGhost.png", "images/orangeGhost.png", "images/pinkGhost.png", "images/redGhost.png", "images/cherry.png", "images/pacmanUp.png", "images/pacmanDown.png", "images/pacmanLeft.png", "images/pacmanRight.png", "Game Over: ", "x", " Score: ", "null", "object", "function", "string", "number", "undefined", "XXOXXXXXXXXXOXXXOXX", "X   C    X    C   X", "X XX XXX X XXX XX X", "X                 X", "X XX X XXXXX X XX X", "X C  X       X    X", "XXXX XXXX XXXX XXXX",
-"OOOX X   C   X XOOO", "XXXX X XXrXX X XXXX", "O C     bpo       O", "XXXX X XXXXX X XXXX", "OOOX X       X XOOO", "X    C   X   C    X", "X  X  C  P     X  X", "XX X X XXXXX X X XX", "X    X   X   X    X", "X XXXXXX X XXXXXX X", "XC       C        X", "XXOXXXXXXXXXXXXXOXX"]);
+$rt_stringPool(["0", "images/wall.png", "images/blueGhost.png", "images/orangeGhost.png", "images/pinkGhost.png", "images/redGhost.png", "images/cherry.png", "images/pacmanUp.png", "images/pacmanDown.png", "images/pacmanLeft.png", "images/pacmanRight.png", "Game Over: ", "x", " Score: ", "null", "object", "function", "string", "number", "undefined", "XXOXXXXXXXXXXXXXOXX", "X   C    X    C   X", "X XX XXX X XXX XX X", "X                 X", "X XX X XXXXX X XX X", "X C  X       X    X", "XXXX XXXX XXXX XXXX",
+"OOOX X   C   X XOOO", "XXXX X XXrXX X XXXX", "O C     bpo       O", "XXXX X XXXXX X XXXX", "OOOX X       X XOOO", "X    C   X   C    X", "X  X  C  P     X  X", "XX X X XXXXX X X XX", "X    X   X   X    X", "X XXXXXX X XXXXXX X", "XC       C        X"]);
 jl_String.prototype.toString = function() {
     return $rt_ustr(this);
 };
